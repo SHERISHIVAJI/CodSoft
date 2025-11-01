@@ -1,0 +1,218 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #00e0b3;
+    --secondary-color: #1a1a2e;
+    --text-color: #ffffff;
+    --card-bg: #272740;
+    --darker-bg: #10101c;
+    --font-heading: 'Orbitron', sans-serif;
+    --font-body: 'Rajdhani', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+}
+
+/* --- Bootstrap Overrides & Custom Components --- */
+.bg-darker {
+    background-color: var(--darker-bg);
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.btn-primary, .main-cta-btn, .popular-btn {
+    --bs-btn-bg: var(--primary-color);
+    --bs-btn-border-color: var(--primary-color);
+    --bs-btn-hover-bg: #00ffc8;
+    --bs-btn-hover-border-color: #00ffc8;
+    --bs-btn-active-bg: #00c090;
+    --bs-btn-active-border-color: #00c090;
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    padding-top: 2rem;
+}
+
+/* --- Navigation Bar Customization --- */
+.navbar {
+    background-color: rgba(26, 26, 46, 0.98);
+    box-shadow: 0 4px 15px rgba(0, 224, 179, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-brand.logo {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    text-shadow: 0 0 8px rgba(0, 224, 179, 0.6);
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+    transform: translateY(-2px);
+    transition: transform 0.3s;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding: 6rem 0 3rem;
+}
+
+.hero-section h1 {
+    padding: 100px;
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+.highlight {
+    color: var(--primary-color);
+    text-shadow: 0 0 15px rgba(0, 224, 179, 0.8);
+}
+
+.main-cta-btn {
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 224, 179, 0.8);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.main-cta-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 30px rgba(0, 224, 179, 1);
+}
+
+/* --- AI Glow Pulse (Innovative Concept) --- */
+.ai-glow-pulse {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    opacity: 0.1;
+    z-index: 1;
+    animation: pulse 5s infinite cubic-bezier(0.4, 0, 0.6, 1);
+    filter: blur(80px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0.1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0.1;
+    }
+}
+
+/* --- Feature Cards --- */
+.feature-card {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(0, 224, 179, 0.2);
+    border-left: 5px solid var(--primary-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 224, 179, 0.4);
+    background-color: #313155;
+}
+
+.feature-card .icon {
+    color: var(--primary-color);
+}
+
+/* --- Pricing Cards --- */
+.plan-card {
+    background-color: var(--card-bg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 224, 179, 0.3);
+}
+
+.plan-card.popular {
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 25px rgba(0, 224, 179, 0.7);
+    transform: scale(1.05);
+    background-color: #313155;
+}
+
+.plan-card.popular:hover {
+    transform: scale(1.08);
+}
+
+.plan-card h3, .plan-card .price {
+    color: var(--primary-color);
+}
+
+.plan-card.popular h3, .plan-card.popular .price {
+    color: var(--text-color);
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: bold;
+    display: block;
+}
+
+.period {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #aaa;
+}
+
+/* --- CTA Banner --- */
+.cta-banner {
+    background-color: var(--card-bg);
+    border-top: 5px solid var(--primary-color);
+}
+
+.demo-btn {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    box-shadow: none !important;
+}
+
+.demo-btn:hover {
+    background-color: var(--primary-color) !important;
+    color: var(--secondary-color);
+    box-shadow: 0 0 15px rgba(0, 224, 179, 0.8) !important;
+}
+
+/* --- Footer --- */
+.footer a {
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: var(--primary-color) !important;
+}
