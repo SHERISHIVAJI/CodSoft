@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheri Shivaji | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <h1><span>S</span>heri <span>S</span>hivaji</h1>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="heading">
+        <h2>Hi, I'm Sheri Shivaji</h2>
+        <p class="typing">Software Developer | Web Developer | Java Enthusiast</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about">
+            <img src="SheriShivaji.jpg" alt="Sheri Shivaji">
+            <p>I'm a passionate and detail-oriented Software Developer skilled in Java, JSP/Servlets, MySQL, HTML, CSS,
+                and JavaScript. I’ve interned at <b>Labmentix</b> and <b>Salesforce</b>, where I worked on full-stack
+                development and CRM customizations. I love building efficient, scalable, and user-focused software that
+                bridges technology and creativity.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Java</h3>
+                <div class="progress-bar">
+                    <div class="bar" data-width="95%"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>HTML, CSS & JavaScript</h3>
+                <div class="progress-bar">
+                    <div class="bar" data-width="90%"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>JSP / Servlets</h3>
+                <div class="progress-bar">
+                    <div class="bar" data-width="85%"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>MySQL</h3>
+                <div class="progress-bar">
+                    <div class="bar" data-width="85%"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>Python</h3>
+                <div class="progress-bar">
+                    <div class="bar" data-width="75%"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>Git & GitHub</h3>
+                <div class="progress-bar">
+                    <div class="bar" data-width="90%"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>OOP, DSA, DBMS</h3>
+                <div class="progress-bar">
+                    <div class="bar" data-width="88%"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>React (Basics)</h3>
+                <div class="progress-bar">
+                    <div class="bar" data-width="70%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-grid">
+            <div class="project">
+                <h3>Navigating Privacy Conflicts in Social Media</h3>
+                <p>Developed a secure web system to manage social media privacy settings using Java, JSP/Servlets, and
+                    MySQL.</p>
+                <a href="https://github.com/SHERISHIVAJI/Navigating_privacy_conflicts_in_social_media"
+                    target="_blank">View Project →</a>
+            </div>
+
+            <div class="project">
+                <h3>Developer-Focused Defect Forecasting</h3>
+                <p>Implemented a developer-centric bug prediction model using Java, JSP, MySQL, and ML algorithms for
+                    defect forecasting.</p>
+                <a href="https://github.com/SHERISHIVAJI/Developer-Focused-Defect-Forecasting" target="_blank">View
+                    Project →</a>
+            </div>
+
+            <div class="project">
+                <h3>SHERU Virtual Assistant</h3>
+                <p>Created a voice-controlled assistant using HTML, CSS, and JavaScript (Web Speech API).</p>
+                <a href="https://shivaji-virtual-assistent.vercel.app/" target="_blank">View Project →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume">
+        <h2 class="section-title">Resume</h2>
+        <p>Click below to download my latest resume.</p>
+        <a href="https://drive.google.com/file/d/1t-IJZMOgAWAMHqBeCwCqgw6cVGWhOITI/view?usp=drive_link"
+            target="_blank">📄 Download Resume</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <p><b>Email:</b> <a href="mailto:shivajisheri@gmail.com">shivajisheri@gmail.com</a></p>
+        <p><b>Phone:</b> +91 9849483963</p>
+        <p><b>LinkedIn:</b><a href="https://www.linkedin.com/in/sherishivaji2774/"
+                target="_blank">linkedin.com/in/sherishivaji2774</a></p>
+        <p><b>GitHub:</b> <a href="https://github.com/SHERISHIVAJI" target="_blank">github.com/SHERISHIVAJI</a></p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Sheri Shivaji. All Rights Reserved. | Designed by Sheri Shivaji</p>
+    </footer>
+    <script>
+        //Animate Skill Bars on Scroll
+        const bars = document.querySelectorAll('.bar');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const width = entry.target.getAttribute('data-width');
+                    entry.target.style.width = width;
+                }
+            });
+        }, { threshold: 0.5 });
+
+        bars.forEach(bar => observer.observe(bar));
+    </script>
+</body>
+
+</html>
